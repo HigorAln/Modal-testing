@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* font-family: 'Comfortaa', cursive;  */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+/* font-family: 'Balsamiq Sans', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap');
+
+:root{
+    --border-solid:1px solid #000;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 22% 78%;
+    grid-template-areas: 
+        "header"
+        "main"
+    ;
+}
+header{
+    border:0;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "menu logo redes";
+    box-shadow: 0 0 10px #bbb;
+    z-index: 100;
+}
+.menu{
+    border:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15%;
+}
+#menu{
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: lighter;
+    z-index: 1000;
+    user-select: none;
+}
+#menu:hover{
+    filter: opacity(60%);
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Comfortaa', cursive;
+    user-select: none;
+}
+.logo p::before{
+    pointer-events: none;
+    content: '';
+    display: block;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(205, 41, 226);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.redes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.rede-img{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    overflow: visible;
+    box-sizing: content-box;
+}
+
+.rede-img:hover{
+    filter: opacity(70%);
+}
+main{
+    border: 0;
+    background-color: rgb(236, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.painel{
+    width: 700px;
+    height: 350px;
+    border:0;
+    margin-top: 3%;
+    background-image: url('./ft.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #555;
+
+}
+main h3{
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 1%;
+}
+main h1{
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+}
+.meuModal{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: gray;
+    visibility: hidden;
+    transition: all 1s;
+}
+#meuModal{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    visibility: hidden;
+    transition: all 0.2s;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "excluir escolha pesquisa"
+    ;
+}
+.escolha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border:0;
+    text-align: center;
+}
+.escolha h1, .escolha h2{
+    font-size: 60px;
+    font-family: 'Comfortaa', cursive;
+    cursor: pointer;
+    border:0;
+    height: 15%;
+    margin-bottom: 1%;
+}
+.escolha h1::after{
+    pointer-events: none;
+    content: '';
+    display: block;
+    background: rgb(207, 207, 207);
+    margin: 5% auto;
+    width: 25vw;
+    height: 1px;
+}
+.escolha h1:hover, .escolha h2:hover{
+    filter: opacity(60%);
+}
+.footer{
+    margin-top: 5%;
+    width: 60%;
+    border: 0;
+    height: 10%;
+    margin-bottom: -8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+}
+.footer h3, .footer h4{
+    font-size: 18px;
+    padding-left: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+}
+.footer h3:hover, .footer h4:hover{
+    filter: opacity(70%);
+}
+.traco{
+    width: 50px;
+    height: 2px;
+    background-color: rgb(221, 113, 24);
+}
+.pesquisa{
+    border:0;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    padding-top: 20%;
+}
+.lupa{
+    transform: scale(-1, 1);
+    font-size: 35px;
+    cursor: pointer;
+    border: 0;
+    user-select: none;
+}
+.lupa:hover{
+    filter: opacity(70%);
+}
